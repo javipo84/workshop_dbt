@@ -1,7 +1,7 @@
 # Name your project! Project names should contain only lowercase characters
 # and underscores. A good package name should reflect your organization's
 # name or the intended use of these models
-name: 'workshop_mapfre'
+name: 'workshop_dbt'
 version: '1.0.0'
 config-version: 2
 dbt-cloud:
@@ -39,7 +39,7 @@ models:
   +persist_docs:
     relation: true
     columns: true
-  workshop_mapfre:
+  workshop_dbt:
     marts:
       sales:
         +group: sales
@@ -57,7 +57,7 @@ snapshots:
   +persist_docs:
     relation: true
     columns: true
-  workshop_mapfre:
+  workshop_dbt:
     tpch:
       +database: "workshop_{{ env_var('DBT_ENVIRONMENT') }}_silver"
       +schema: tpch
